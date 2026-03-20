@@ -1,0 +1,18 @@
+Terraform Installation
+# Update packages
+sudo apt-get update
+
+# Install required tools
+sudo apt-get install -y gnupg software-properties-common curl
+
+# Add HashiCorp GPG key
+curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+
+# Add the HashiCorp repo
+sudo apt-add-repository "deb https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+
+# Update again
+sudo apt-get update
+
+# Install Terraform
+sudo apt-get install terraform
